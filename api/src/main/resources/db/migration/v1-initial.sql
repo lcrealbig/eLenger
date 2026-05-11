@@ -15,6 +15,9 @@ CREATE TABLE app_user (
     display_name VARCHAR(255),
     avatar_url VARCHAR(512),
     total_points INT NOT NULL DEFAULT 0,
+    confirmation_token TEXT,
+    confirmation_token_expiration TIMESTAMP,
+    enabled BOOLEAN NOT NULL DEFAULT FALSE,
     created_at TIMESTAMP NOT NULL DEFAULT now(),
     updated_at TIMESTAMP NOT NULL DEFAULT now()
 );
@@ -78,7 +81,7 @@ CREATE TABLE rivalry (
     title VARCHAR(255) NOT NULL,
     type VARCHAR(50) NOT NULL,   -- DUEL (1v1), TEAM, GROUP_RANKING
     group_id UUID REFERENCES rivalry_group(id) ON DELETE SET NULL,
-    status VARCHAR(50) NOT NULL DEFAULT 'ACTIVE',  -- ACTIVE, FINISHED, CANCELLED
+    status VARCHAR(50) NOT NULL DEFAULT 'ACTIVE',
     started_at TIMESTAMP NOT NULL DEFAULT now(),
     ended_at TIMESTAMP,
     created_at TIMESTAMP NOT NULL DEFAULT now()
@@ -88,7 +91,7 @@ CREATE TABLE rivalry_participant (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     rivalry_id UUID NOT NULL REFERENCES rivalry(id) ON DELETE CASCADE,
     user_id UUID NOT NULL REFERENCES app_user(id) ON DELETE CASCADE,
-    team_name VARCHAR(100),   -- dla TEAM rivalries
+    team_name VARCHAR(100),
     score INT NOT NULL DEFAULT 0,
     rank INT,
     CONSTRAINT uq_rivalry_participant UNIQUE (rivalry_id, user_id)

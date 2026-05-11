@@ -1,0 +1,60 @@
+<!-- src/app/auth/register/register.component.html -->
+<div class="min-h-screen flex items-center justify-center bg-red-600 px-4">
+  <div class="bg-black rounded-xl p-8 w-full max-w-md shadow-xl">
+    <h1 class="text-white text-3xl font-extrabold mb-8 text-center uppercase tracking-widest">
+      Rejestracja
+    </h1>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+      <div>
+        <label for="email" class="text-white text-sm font-bold">Email</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-red-500 focus:outline-none"
+          placeholder="Wprowadź email"
+        />
+        <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="text-red-400 text-xs mt-1">
+          Wprowadź poprawny email
+        </div>
+      </div>
+
+      <div>
+        <label for="password" class="text-white text-sm font-bold">Hasło</label>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-red-500 focus:outline-none"
+          placeholder="Wprowadź hasło (min. 6 znaków)"
+        />
+        <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-red-400 text-xs mt-1">
+          Hasło musi mieć co najmniej 6 znaków
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="registerForm.invalid"
+        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors disabled:opacity-50"
+      >
+        Zarejestruj się
+      </button>
+
+      <div *ngIf="errorMessage" class="text-red-400 text-sm text-center">
+        {{ errorMessage }}
+      </div>
+
+      <div *ngIf="successMessage" class="text-green-400 text-sm text-center">
+        {{ successMessage }}
+      </div>
+    </form>
+
+    <div class="mt-4 text-center">
+      <p class="text-gray-400 text-sm">Masz już konto?
+        <a routerLink="/login" class="text-red-400 hover:underline">Zaloguj się</a>
+      </p>
+    </div>
+  </div>
+</div>

@@ -36,6 +36,15 @@ public class User {
     @Column(name = "total_points", nullable = false)
     private int totalPoints = 0;
 
+    @Column(name = "confirmation_token", nullable = false)
+    private String confirmationToken;
+
+    @Column(name = "confirmation_token_expiration", nullable = false)
+    private LocalDateTime confirmationTokenExpiration = LocalDateTime.now();
+
+    @Column(name = "enabled", nullable = false)
+    private boolean enabled;
+
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 

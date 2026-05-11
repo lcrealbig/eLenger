@@ -1,6 +1,10 @@
-package com.api.lenger.common;
+package com.api.lenger.common.auth;
 
+import com.api.lenger.common.login.LoginRequest;
+import com.api.lenger.common.register.RegisterRequest;
 import com.api.lenger.domain.identity.EmailService;
+import com.api.lenger.domain.user.User;
+import com.api.lenger.domain.user.UserDto;
 import com.api.lenger.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -22,28 +26,27 @@ public class AuthService {
         }
 
         User user = new User();
-        user.setEmail(request.getEmail());
-        user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.getIdentity().setEmail(request.getEmail());
+        user.getIdentity().setPasswordHash(passwordEncoder.encode(request.getPassword()));
         user.setEnabled(false); // Na początek nieaktywny
 
         // Generuj token potwierdzenia (mockowany)
         String token = UUID.randomUUID().toString();
         user.setConfirmationToken(token);
-        user.setTokenExpiration(LocalDateTime.now().plusHours(24));
+        user.setConfirmationTokenExpiration(LocalDateTime.now().plusHours(24));
 
         userRepository.save(user);
 
-        // Tutaj wyślij email z linkiem potwierdzenia (mockowany)
-        // emailService.sendConfirmationEmail(user.getEmail(), token);
+\        // emailService.sendConfirmationEmail(user.getEmail(), token);
 
         return mapToUserDto(user);
     }
 
     public UserDto login(LoginRequest request) {
-        User user = userRepository.findByEmail(request.getEmail())
+        var user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
+        if (!passwordEncoder.matches(request.getPassword(), user.getIdentity().getPasswordHash())) {
             throw new RuntimeException("Invalid password");
         }
 
@@ -58,13 +61,13 @@ public class AuthService {
         User user = userRepository.findByConfirmationToken(token)
                 .orElseThrow(() -> new RuntimeException("Invalid token"));
 
-        if (user.getTokenExpiration().isBefore(LocalDateTime.now())) {
+        if (user.getConfirmationTokenExpiration().isBefore(LocalDateTime.now())) {
             throw new RuntimeException("Token expired");
         }
 
         user.setEnabled(true);
         user.setConfirmationToken(null);
-        user.setTokenExpiration(null);
+        user.setConfirmationTokenExpiration(null);
         userRepository.save(user);
 
         return mapToUserDto(user);
