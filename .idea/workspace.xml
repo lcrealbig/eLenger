@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c408b6db-2b93-4004-ab73-4ec2466cbae2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Lenger.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PROXYAI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/api/lenger/LengerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/api/lenger/identity/controller/IdentityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/api/lenger/LengerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/api/lenger/TestLengerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/api/lenger/TestcontainersConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.vscode/mcp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DEVOXXGENIE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/app.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/app.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/app.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/app.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/components/main-layout/main-layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/components/main-layout/main-layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/components/main-layout/main-layout.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/app/components/main-layout/main-layout.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/infra.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3DUnjcQZgoytkMLyUHpSHyYHIsa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LengerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.devoxx.genie.DevoxxGenie&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repos\Lenger\lenger\src\main\java\com\api\lenger\controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LengerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.api.lenger.LengerApplication" />
+      <module name="api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.api.lenger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LengerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c408b6db-2b93-4004-ab73-4ec2466cbae2" name="Changes" comment="" />
+      <created>1778345655131</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778345655131</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
