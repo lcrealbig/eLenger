@@ -1,44 +1,35 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
-import { RegisterRequest } from '../../core/models/register-request.model';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  ReactiveFormsModule
+} from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  standalone: true,
+  imports: [
+    CommonModule, // <-- Potrzebny dla *ngIf
+    ReactiveFormsModule, // <-- Potrzebny dla formGroup, formControlName
+  ],
+  templateUrl: './register.html',
+  styleUrls: ['./register.css']
 })
 export class RegisterComponent {
   registerForm: FormGroup;
-  errorMessage: string = '';
-  successMessage: string = '';
 
-  constructor(
-    private fb: FormBuilder,
-    private authService: AuthService,
-    private router: Router
-  ) {
+  constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
   onSubmit() {
     if (this.registerForm.valid) {
-      const registerRequest: RegisterRequest = this.registerForm.value;
-      this.authService.register(registerRequest).subscribe({
-        next: (user) => {
-          this.successMessage = 'Rejestracja udana! Sprawdź swoją skrzynkę mailową (mock).';
-          this.errorMessage = '';
-          // Na razie nie przekierowujemy, bo mockujemy potwierdzenie
-        },
-        error: (err) => {
-          this.errorMessage = err.error || 'Rejestracja nieudana';
-          this.successMessage = '';
-        }
-      });
+      console.log('Formularz poprawny:', this.registerForm.value);
     }
   }
 }

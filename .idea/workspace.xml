@@ -4,15 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c408b6db-2b93-4004-ab73-4ec2466cbae2" name="Changes" comment="moved repos and entities to separate packages">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c408b6db-2b93-4004-ab73-4ec2466cbae2" name="Changes" comment="save">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/components/confirmation/confirmation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/confirmation/confirmation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/components/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/components/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/components/register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/register/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/components/register/register.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/register/register.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/core/model/register-request.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/core/model/register-request.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/core/service/AuthService.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,6 +75,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repos\Lenger\app\src\app\core\model" />
+      <recent name="D:\repos\Lenger\app\src\app\core" />
       <recent name="D:\repos\Lenger\lenger\src\main\java\com\api\lenger\controller" />
     </key>
   </component>
@@ -129,7 +147,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778514267732</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="moved packages, added auth service">
+      <option name="closed" value="true" />
+      <created>1778519303241</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778519303241</updated>
+    </task>
+    <task id="LOCAL-00006" summary="save">
+      <option name="closed" value="true" />
+      <created>1778521154438</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778521154438</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -137,7 +171,9 @@
     <MESSAGE value="added migrations, entities" />
     <MESSAGE value="deleted unused module" />
     <MESSAGE value="moved repos and entities to separate packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved repos and entities to separate packages" />
+    <MESSAGE value="moved packages, added auth service" />
+    <MESSAGE value="save" />
+    <option name="LAST_COMMIT_MESSAGE" value="save" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

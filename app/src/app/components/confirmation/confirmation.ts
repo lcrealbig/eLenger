@@ -1,11 +1,18 @@
+// src/app/auth/confirm/confirm.component.ts
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { CommonModule } from '@angular/common'; // <-- Dodaj CommonModule
+import { ActivatedRoute, Router, RouterLink } from '@angular/router'; // <-- Jeśli używasz routerLink
+import { AuthService } from '../../core/service/auth.service';
 
 @Component({
   selector: 'app-confirm',
-  templateUrl: './confirm.component.html',
-  styleUrls: ['./confirm.component.css']
+  standalone: true, // <-- Musi być true
+  imports: [
+    CommonModule, // <-- Potrzebny dla ngClass, *ngIf itp.
+    RouterLink, // <-- Potrzebny, jeśli używasz routerLink (np. w button)
+  ],
+  templateUrl: './confirmation.html',
+  styleUrls: ['./confirmation.css']
 })
 export class ConfirmComponent implements OnInit {
   message: string = '';

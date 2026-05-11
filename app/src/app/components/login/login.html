@@ -1,55 +1,47 @@
-<div class="min-h-screen flex items-center justify-center bg-red-600 px-4">
-  <div class="bg-black rounded-xl p-8 w-full max-w-md shadow-xl">
-    <h1 class="text-white text-3xl font-extrabold mb-8 text-center uppercase tracking-widest">
-      Logowanie
-    </h1>
-
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
-      <div>
-        <label for="email" class="text-white text-sm font-bold">Email</label>
-        <input
-          id="email"
-          type="email"
-          formControlName="email"
-          class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-red-500 focus:outline-none"
-          placeholder="Wprowadź email"
-        />
-        <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-red-400 text-xs mt-1">
-          Wprowadź poprawny email
-        </div>
-      </div>
-
-      <div>
-        <label for="password" class="text-white text-sm font-bold">Hasło</label>
-        <input
-          id="password"
-          type="password"
-          formControlName="password"
-          class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-red-500 focus:outline-none"
-          placeholder="Wprowadź hasło"
-        />
-        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-red-400 text-xs mt-1">
-          Hasło jest wymagane
-        </div>
-      </div>
-
-      <button
-        type="submit"
-        [disabled]="loginForm.invalid"
-        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors disabled:opacity-50"
-      >
-        Zaloguj się
-      </button>
-
-      <div *ngIf="errorMessage" class="text-red-400 text-sm text-center">
-        {{ errorMessage }}
-      </div>
-    </form>
-
-    <div class="mt-4 text-center">
-      <p class="text-gray-400 text-sm">Nie masz konta?
-        <a routerLink="/register" class="text-red-400 hover:underline">Zarejestruj się</a>
-      </p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+  <div>
+    <label for="email" class="text-white text-sm font-bold">Email</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-red-500 focus:outline-none"
+      placeholder="Wprowadź email"
+    />
+    <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-red-400 text-xs mt-1">
+      Wprowadź poprawny email
     </div>
   </div>
-</div>
+
+  <div>
+    <label for="password" class="text-white text-sm font-bold">Hasło</label>
+    <input
+      id="password"
+      type="password"
+      formControlName="password"
+      class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-red-500 focus:outline-none"
+      placeholder="Wprowadź hasło"
+    />
+    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-red-400 text-xs mt-1">
+      Hasło jest wymagane
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="loginForm.invalid"
+    class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors disabled:opacity-50"
+  >
+    Zaloguj się
+  </button>
+
+  <div *ngIf="errorMessage" class="text-red-400 text-sm text-center">
+    {{ errorMessage }}
+  </div>
+
+  <div class="mt-4 text-center">
+    <p class="text-gray-400 text-sm">Nie masz konta?
+      <a routerLink="/register" class="text-red-400 hover:underline">Zarejestruj się</a>
+    </p>
+  </div>
+</form>
