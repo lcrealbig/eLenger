@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c408b6db-2b93-4004-ab73-4ec2466cbae2" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/api/untitled/src/main/java/org/example/Main.java" beforeDir="false" />
+    <list default="true" id="c408b6db-2b93-4004-ab73-4ec2466cbae2" name="Changes" comment="moved repos and entities to separate packages">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,9 @@
     &quot;accountId&quot;: &quot;0775659f-9fd3-496b-aaf0-a2852fa95c00&quot;
   }
 }</component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -108,13 +113,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778512991936</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deleted unused module">
+      <option name="closed" value="true" />
+      <created>1778513158143</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778513158143</updated>
+    </task>
+    <task id="LOCAL-00004" summary="moved repos and entities to separate packages">
+      <option name="closed" value="true" />
+      <created>1778514267732</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778514267732</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="added migrations, entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="added migrations, entities" />
+    <MESSAGE value="deleted unused module" />
+    <MESSAGE value="moved repos and entities to separate packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved repos and entities to separate packages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
