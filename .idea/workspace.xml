@@ -4,60 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c408b6db-2b93-4004-ab73-4ec2466cbae2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Lenger.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PROXYAI.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/api/lenger/LengerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/api/lenger/identity/controller/IdentityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/api/lenger/LengerApplicationTests.java" afterDir="false" />
+    <list default="true" id="c408b6db-2b93-4004-ab73-4ec2466cbae2" name="Changes" comment="init">
       <change afterPath="$PROJECT_DIR$/api/src/test/java/com/api/lenger/TestLengerApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/src/test/java/com/api/lenger/TestcontainersConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.vscode/extensions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.vscode/launch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.vscode/mcp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.vscode/tasks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/DEVOXXGENIE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/app.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/app.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/app.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/components/main-layout/main-layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/components/main-layout/main-layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/components/main-layout/main-layout.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/components/main-layout/main-layout.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/infra.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROXYAI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/components/header/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/header/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/components/header/header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/header/header.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "lcrealbig"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/lcrealbig/eLenger.git",
+    "accountId": "0775659f-9fd3-496b-aaf0-a2852fa95c00"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -132,7 +97,20 @@
       <option name="presentableId" value="Default" />
       <updated>1778345655131</updated>
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1778481910203</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778481910203</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
