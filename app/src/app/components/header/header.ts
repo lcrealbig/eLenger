@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  template: `
-    <header class="bg-black text-white px-8 py-4 flex items-center justify-between shadow-lg">
-      <span class="text-2xl font-bold tracking-widest uppercase">EventApp</span>
-      <nav class="flex gap-6 text-sm font-medium">
-        <a href="#" class="hover:text-red-400 transition-colors">Home</a>
-        <a href="#" class="hover:text-red-400 transition-colors">Events</a>
-        <a href="#" class="hover:text-red-400 transition-colors">About</a>
-      </nav>
-    </header>
-  `,
+  imports: [CommonModule],
+  templateUrl: `./header.html`,
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  isOpen = signal(false);
+
+  toggleMenu() {
+    this.isOpen.update(v => !v);
+  }
+}
