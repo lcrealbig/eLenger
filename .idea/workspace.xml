@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c408b6db-2b93-4004-ab73-4ec2466cbae2" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/api/lenger/TestLengerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/api/lenger/TestcontainersConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PROXYAI.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/header/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/header/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/header/header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/header/header.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/untitled/src/main/java/org/example/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,18 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "lcrealbig"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lcrealbig&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/lcrealbig/eLenger.git",
-    "accountId": "0775659f-9fd3-496b-aaf0-a2852fa95c00"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lcrealbig/eLenger.git&quot;,
+    &quot;accountId&quot;: &quot;0775659f-9fd3-496b-aaf0-a2852fa95c00&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -105,12 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1778481910203</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added migrations, entities">
+      <option name="closed" value="true" />
+      <created>1778512991936</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778512991936</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="added migrations, entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="added migrations, entities" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
