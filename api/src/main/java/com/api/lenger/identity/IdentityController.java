@@ -1,4 +1,4 @@
-package com.api.lenger.identity.controller;
+package com.api.lenger.identity;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

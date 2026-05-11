@@ -1,6 +1,6 @@
-package com.api.lenger.identity.controller.persistence.repository;
+package com.api.lenger.contact.repository;
 
-import com.api.lenger.identity.controller.persistence.entity.Contact;
+import com.api.lenger.contact.entity.Contact;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

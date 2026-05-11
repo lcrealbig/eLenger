@@ -1,4 +1,15 @@
-package com.api.lenger.identity.controller.persistence.entity;
+package com.api.lenger.groupMember;
+
+import com.api.lenger.group.Group;
+import com.api.lenger.user.User;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "group_member",

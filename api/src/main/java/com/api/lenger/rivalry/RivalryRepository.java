@@ -1,6 +1,5 @@
-package com.api.lenger.identity.controller.persistence.repository;
+package com.api.lenger.rivalry;
 
-import com.api.lenger.identity.controller.persistence.entity.Rivalry;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

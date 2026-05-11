@@ -1,9 +1,21 @@
-package com.api.lenger.identity.controller.persistence.entity;
+package com.api.lenger.eventParticipant;
+
+import com.api.lenger.event.Event;
+import com.api.lenger.user.User;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "event_participant",
         uniqueConstraints = @UniqueConstraint(columnNames = {"event_id", "user_id"}))
-@Getter @Setter @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
 public class EventParticipant {
 
     @Id

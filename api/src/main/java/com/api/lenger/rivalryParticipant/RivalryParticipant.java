@@ -1,8 +1,20 @@
-package com.api.lenger.identity.controller.persistence.entity;
+package com.api.lenger.rivalryParticipant;
+
+import com.api.lenger.rivalry.Rivalry;
+import com.api.lenger.user.User;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.UUID;
+
 @Entity
 @Table(name = "rivalry_participant",
         uniqueConstraints = @UniqueConstraint(columnNames = {"rivalry_id", "user_id"}))
-@Getter @Setter @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
 public class RivalryParticipant {
 
     @Id

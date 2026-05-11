@@ -1,6 +1,5 @@
-package com.api.lenger.identity.controller.persistence.repository;
+package com.api.lenger.event;
 
-import com.api.lenger.identity.controller.persistence.entity.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

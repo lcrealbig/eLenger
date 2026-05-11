@@ -1,6 +1,5 @@
-package com.api.lenger.identity.controller.persistence.repository;
+package com.api.lenger.groupMember;
 
-import com.api.lenger.identity.controller.persistence.entity.GroupMember;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

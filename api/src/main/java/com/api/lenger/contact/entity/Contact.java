@@ -1,6 +1,7 @@
-package com.api.lenger.identity.controller.persistence.entity;
+package com.api.lenger.contact.entity;
 
-import com.api.lenger.identity.controller.persistence.entity.type.ContactStatus;
+import com.api.lenger.contact.type.ContactStatus;
+import com.api.lenger.user.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

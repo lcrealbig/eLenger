@@ -1,4 +1,18 @@
-package com.api.lenger.identity.controller.persistence.entity;
+package com.api.lenger.group;
+
+import com.api.lenger.groupMember.GroupMember;
+import com.api.lenger.user.User;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 
 @Entity
 @Table(name = "rivalry_group")

@@ -1,10 +1,19 @@
-package com.api.lenger.identity.controller.persistence.entity;
+package com.api.lenger.user;
 
+import com.api.lenger.identity.Identity;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
 @Table(name = "app_user")
-@Getter @Setter @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
 public class User {
 
     @Id
