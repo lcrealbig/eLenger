@@ -1,4 +1,4 @@
-package com.api.lenger.common.auth;
+package com.api.lenger.domain.auth;
 
 import com.api.lenger.common.login.LoginRequest;
 import com.api.lenger.common.register.RegisterRequest;
@@ -16,8 +16,8 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/register")
-    public ResponseEntity<UserDto> register(@RequestBody @Valid RegisterRequest request) {
-        return ResponseEntity.ok(authService.register(request));
+    public ResponseEntity<UserDto> register(@RequestBody @Valid RegisterRequest body) {
+        return ResponseEntity.ok(authService.register(body));
     }
 
     @PostMapping("/login")

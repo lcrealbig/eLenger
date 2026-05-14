@@ -1,51 +1,53 @@
-package com.api.lenger.common.auth;
+package com.api.lenger.domain.auth;
 
 import com.api.lenger.common.login.LoginRequest;
 import com.api.lenger.common.register.RegisterRequest;
 import com.api.lenger.domain.identity.EmailService;
-import com.api.lenger.domain.user.User;
-import com.api.lenger.domain.user.UserDto;
-import com.api.lenger.domain.user.UserRepository;
+import com.api.lenger.domain.user.*;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class AuthService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final EmailService emailService; // Mockowany na razie
+    private final EmailService emailService;
+    private final UserMapper userMapper;
 
-    public UserDto register(RegisterRequest request) {
-        if (userRepository.findByEmail(request.getEmail()).isPresent()) {
-            throw new RuntimeException("Email already in use");
+    public UserDto register(RegisterRequest requestBody) {
+        if (userRepository.findByEmail(requestBody.email()).isPresent()) {
+
+            log.warn("Registration attempt for request ");
+            throw new RegisterException("Email already in use");
         }
 
-        User user = new User();
-        user.getIdentity().setEmail(request.getEmail());
-        user.getIdentity().setPasswordHash(passwordEncoder.encode(request.getPassword()));
-        user.setEnabled(false); // Na początek nieaktywny
+        var user = new User();
+        user.getIdentity().setEmail(requestBody.email());
+        user.getIdentity().setPasswordHash(passwordEncoder.encode(requestBody.password()));
+        user.setEnabled(false);
 
-        // Generuj token potwierdzenia (mockowany)
-        String token = UUID.randomUUID().toString();
+        var token = UUID.randomUUID().toString();
         user.setConfirmationToken(token);
         user.setConfirmationTokenExpiration(LocalDateTime.now().plusHours(24));
 
         userRepository.save(user);
 
-\        // emailService.sendConfirmationEmail(user.getEmail(), token);
+        emailService.sendConfirmationEmail(user.getIdentity().getEmail(), token);
 
-        return mapToUserDto(user);
+        return userMapper.toDto(user);
     }
 
     public UserDto login(LoginRequest request) {
         var user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new RuntimeException("User not found"));
-
         if (!passwordEncoder.matches(request.getPassword(), user.getIdentity().getPasswordHash())) {
             throw new RuntimeException("Invalid password");
         }
@@ -54,11 +56,11 @@ public class AuthService {
             throw new RuntimeException("Account not activated");
         }
 
-        return mapToUserDto(user);
+        return userMapper.toDto(user);
     }
 
     public UserDto confirmEmail(String token) {
-        User user = userRepository.findByConfirmationToken(token)
+        var user = userRepository.findByConfirmationToken(token)
                 .orElseThrow(() -> new RuntimeException("Invalid token"));
 
         if (user.getConfirmationTokenExpiration().isBefore(LocalDateTime.now())) {
@@ -70,14 +72,6 @@ public class AuthService {
         user.setConfirmationTokenExpiration(null);
         userRepository.save(user);
 
-        return mapToUserDto(user);
-    }
-
-    private UserDto mapToUserDto(User user) {
-        UserDto dto = new UserDto();
-        dto.setId(user.getId());
-        dto.setEmail(user.getEmail());
-        dto.setEnabled(user.isEnabled());
-        return dto;
+        return userMapper.toDto(user);
     }
 }

@@ -1,10 +1,10 @@
-// src/main/java/com/yourapp/dto/RegisterRequest.java
 package com.api.lenger.common.register;
 
-import lombok.Data;
 
-@Data
-public class RegisterRequest {
-    private String email;
-    private String password;
+import jakarta.validation.constraints.NotBlank;
+
+public record RegisterRequest (
+        @NotBlank String email,
+        @NotBlank String password
+) {
 }

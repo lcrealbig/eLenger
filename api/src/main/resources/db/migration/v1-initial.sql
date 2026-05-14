@@ -96,3 +96,20 @@ CREATE TABLE rivalry_participant (
     rank INT,
     CONSTRAINT uq_rivalry_participant UNIQUE (rivalry_id, user_id)
 );
+
+CREATE TABLE expiration (
+    id                      UUID                        NOT NULL,
+    owner_type              VARCHAR(50)                 NOT NULL,
+    owner_id                VARCHAR(255)                NOT NULL,
+    expiration_in_seconds   BIGINT                      NOT NULL,
+    description             VARCHAR(255),
+    created_at              TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW(),
+    updated_at              TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW(),
+    expiration_at           TIMESTAMP WITHOUT TIME ZONE,
+
+    CONSTRAINT pk_expiration PRIMARY KEY (id)
+);
+
+//Indexes
+CREATE INDEX idx_expiration_owner ON expiration(owner_type, owner_id);
+CREATE INDEX idx_expiration_at ON expiration(expiration_at);
