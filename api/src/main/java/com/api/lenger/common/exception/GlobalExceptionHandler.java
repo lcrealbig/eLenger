@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ResourceNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)   // 404
-    public ErrorResponse handleNotFound(ResourceNotFoundException ex) {
-        return new ErrorResponse("NOT_FOUND", ex.getMessage());
-    }
+//    @ExceptionHandler(ResourceNotFoundException.class)
+//    @ResponseStatus(HttpStatus.NOT_FOUND)
+//    public ErrorResponse handleNotFound(ResourceNotFoundException ex) {
+//        return new ErrorResponse("NOT_FOUND", ex.getMessage());
+//    }
 }

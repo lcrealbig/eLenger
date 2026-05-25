@@ -23,7 +23,7 @@ public class AuthService {
     private final UserMapper userMapper;
 
     public UserDto register(RegisterRequest requestBody) {
-        if (userRepository.findByEmail(requestBody.email()).isPresent()) {
+        if (userRepository.findByIdentityEmail(requestBody.email()).isPresent()) {
 
             log.warn("Registration attempt for request ");
             throw new RegisterException("Email already in use");
@@ -46,9 +46,9 @@ public class AuthService {
     }
 
     public UserDto login(LoginRequest request) {
-        var user = userRepository.findByEmail(request.getEmail())
+        var user = userRepository.findByIdentityEmail(request.email())
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        if (!passwordEncoder.matches(request.getPassword(), user.getIdentity().getPasswordHash())) {
+        if (!passwordEncoder.matches(request.password() , user.getIdentity().getPasswordHash())) {
             throw new RuntimeException("Invalid password");
         }
 
