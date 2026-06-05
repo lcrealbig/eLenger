@@ -1,16 +1,17 @@
-// src/app/auth/login/login.component.ts
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms'; // <-- Import ReactiveFormsModule
 import { CommonModule } from '@angular/common'; // <-- Import CommonModule (dla *ngIf)
 import { Router, RouterLink } from '@angular/router'; // <-- Jeśli używasz routerLink
+import { AuthService } from '../../core/service/auth.service';
+import { LoginRequest } from '../../core/model/login-request.model';
 
 @Component({
   selector: 'app-login',
-  standalone: true, // <-- Musi być true
+  standalone: true, 
   imports: [
-    CommonModule, // <-- Potrzebny dla *ngIf, *ngFor
-    ReactiveFormsModule, // <-- Potrzebny dla formGroup, formControlName
-    RouterLink, // <-- Potrzebny, jeśli używasz routerLink (np. w linku do rejestracji)
+    CommonModule,
+    ReactiveFormsModule,
+    RouterLink,
   ],
   templateUrl: './login.html',
   styleUrls: ['./login.css']
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -34,10 +36,16 @@ export class LoginComponent implements OnInit {
     
   }
 
-  onSubmit() {
-    if (this.loginForm.valid) {
-      console.log('Logowanie:', this.loginForm.value);
-      // Tutaj dodaj logikę logowania (np. wywołanie AuthService)
-    }
+onSubmit() {
+  if (this.loginForm.valid) {
+    console.log('Logowanie:', this.loginForm.value);
+    
+    const loginRequest: LoginRequest = {
+      email: this.loginForm.get('email')?.value, 
+      password: this.loginForm.get('password')?.value
+    };
+    
+    this.authService.login(loginRequest);
   }
+}
 }

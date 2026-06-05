@@ -4,7 +4,6 @@ import com.api.lenger.common.login.LoginRequest;
 import com.api.lenger.common.register.RegisterRequest;
 import com.api.lenger.domain.identity.EmailService;
 import com.api.lenger.domain.user.*;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
