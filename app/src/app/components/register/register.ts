@@ -6,13 +6,15 @@ import {
   ReactiveFormsModule
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../core/service/auth.service';
+import { RegisterRequest } from '../../core/model/register-request.model';
 
 @Component({
   selector: 'app-register',
   standalone: true,
   imports: [
-    CommonModule, // <-- Potrzebny dla *ngIf
-    ReactiveFormsModule, // <-- Potrzebny dla formGroup, formControlName
+    CommonModule, 
+    ReactiveFormsModule,
   ],
   templateUrl: './register.html',
   styleUrls: ['./register.css']
@@ -20,7 +22,7 @@ import { CommonModule } from '@angular/common';
 export class RegisterComponent {
   registerForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: AuthService) {
     this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
@@ -29,7 +31,12 @@ export class RegisterComponent {
 
   onSubmit() {
     if (this.registerForm.valid) {
-      console.log('Formularz poprawny:', this.registerForm.value);
+      const registerRequest: RegisterRequest = {
+        email: this.registerForm.get("email")?.value,
+        password: this.registerForm.get("password")?.value
+      };
+      this.authService.register(registerRequest)
+      .subscribe();
     }
   }
 }

@@ -45,7 +45,16 @@ onSubmit() {
       password: this.loginForm.get('password')?.value
     };
     
-    this.authService.login(loginRequest);
+  this.authService.login(loginRequest)
+  .subscribe({
+    next: () => {
+      localStorage.setItem('isLoggedIn', 'true'); 
+      this.router.navigate(['/activities']);
+    },
+    error: (error) => {
+      console.error('Login failed:', error);
+    }
+  });
   }
 }
 }

@@ -10,16 +10,13 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'confirm/:token', component: ConfirmComponent },
 
-  // Chroniona trasa (tylko dla zalogowanych)
   {
-    path: 'activities', // lub inna nazwa, np. 'dashboard'
-    component: MainLayoutComponent,
-    canActivate: [authGuard], // Ochrona przez AuthGuard
-  },
+  path: 'activities',
+  component: MainLayoutComponent,
+  canActivate: [authGuard]
+},
 
-  // Domyślna trasa: przekieruj na /login
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 
-  // Przekierowanie dla nieznanych tras
   { path: '**', redirectTo: '/login' },
 ];

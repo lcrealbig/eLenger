@@ -1,9 +1,12 @@
-package com.api.lenger.domain.auth;
+package com.api.lenger.common.security.auth;
 
 import com.api.lenger.common.login.LoginRequest;
 import com.api.lenger.common.register.RegisterRequest;
 import com.api.lenger.domain.identity.EmailService;
+import com.api.lenger.domain.identity.Identity;
+import com.api.lenger.domain.identity.IdentityRepository;
 import com.api.lenger.domain.user.*;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -17,10 +20,12 @@ import java.util.UUID;
 public class AuthService {
 
     private final UserRepository userRepository;
+    private final IdentityRepository idRepository;
     private final PasswordEncoder passwordEncoder;
     private final EmailService emailService;
     private final UserMapper userMapper;
 
+    @Transactional
     public UserDto register(RegisterRequest requestBody) {
         if (userRepository.findByIdentityEmail(requestBody.email()).isPresent()) {
 
@@ -28,15 +33,23 @@ public class AuthService {
             throw new RegisterException("Email already in use");
         }
 
+        var id = new Identity();
+        id.setEmail(requestBody.email());
+        id.setPasswordHash(passwordEncoder.encode(requestBody.password()));
+        id.setProvider(Identity.AuthProvider.LOCAL);
+        id.setCreatedAt(LocalDateTime.now());
+        idRepository.saveAndFlush(id);
+
         var user = new User();
-        user.getIdentity().setEmail(requestBody.email());
-        user.getIdentity().setPasswordHash(passwordEncoder.encode(requestBody.password()));
-        user.setEnabled(false);
+        // TODO temp. enabled
+        user.setIdentity(id);
+        user.setEnabled(true);
 
         var token = UUID.randomUUID().toString();
         user.setConfirmationToken(token);
         user.setConfirmationTokenExpiration(LocalDateTime.now().plusHours(24));
-
+        //TODO
+        user.setUsername("TEST-USER");
         userRepository.save(user);
 
         emailService.sendConfirmationEmail(user.getIdentity().getEmail(), token);

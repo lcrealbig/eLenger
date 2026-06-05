@@ -17,9 +17,9 @@ export class AuthService {
     return this.http.post<User>(`${this.apiUrl}/register`, registerRequest);
   }
 
-  login(loginRequest: LoginRequest): Observable<User> {
-    return this.http.post<User>(`${this.apiUrl}/login`, loginRequest);
-  }
+  login(credentials: LoginRequest) {
+  return this.http.post(this.apiUrl + "/login", credentials, { withCredentials: true });
+}
 
   confirmEmail(token: string): Observable<User> {
     return this.http.get<User>(`http://localhost:8080/api/confirm/${token}`);
