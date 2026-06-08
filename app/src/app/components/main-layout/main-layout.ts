@@ -21,14 +21,14 @@ export class MainLayoutComponent {
   events: AppEvent[] = [
     {
       id: 1,
-      title: 'Angular Summit 2025',
+      title: 'Personal Challange',
       date: '2025-06-15',
       location: 'Warszawa',
-      description: 'Największa konferencja Angular w Polsce.',
+      description: 'Piotr M. has challanged you!',
     },
     {
       id: 2,
-      title: 'Frontend Meetup',
+      title: 'Group Challange',
       date: '2025-07-01',
       location: 'Kraków',
       description: 'Spotkanie dla frontendowców — networking i prelekcje.',
